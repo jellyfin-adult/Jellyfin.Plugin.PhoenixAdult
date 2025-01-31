@@ -42,7 +42,7 @@ public class SiteAnalMomTests
         Assert.That(result.People.Count, Is.EqualTo(1));
         Assert.That(result.People.Select(t => t.Name), Does.Contain("Christy Love"));
 #pragma warning disable NUnit2021 // Incompatible types for EqualTo constraint
-        Assert.That(result.Item.PremiereDate, Is.EqualTo(new DateTime(2024, 02, 17)).Within(24).Hours);
+        Assert.That(result.Item.PremiereDate, Is.EqualTo(new DateTime(2024, 02, 17)).Within(12).Hours);
 #pragma warning restore NUnit2021 // Incompatible types for EqualTo constraint
     }
 

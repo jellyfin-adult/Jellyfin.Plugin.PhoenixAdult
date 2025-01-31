@@ -341,7 +341,7 @@ namespace Pronium.Sites
 
             if (string.IsNullOrEmpty(result))
             {
-                var http = await HTTP.Request(Helper.GetSearchBaseURL(siteNum) + "/en/login", cancellationToken).ConfigureAwait(false);
+                var http = await HTTP.Request(Helper.GetSearchBaseURL(siteNum), cancellationToken).ConfigureAwait(false);
                 if (http.IsOK)
                 {
                     var regEx = Regex.Match(http.Content, "\"apiKey\":\"(.*?)\"");
